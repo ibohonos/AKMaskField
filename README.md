@@ -72,7 +72,7 @@ To install **AKMaskField** with Carthage:
 	$ brew install carthage
 	```
 
-2. Add `github "artemkrachulov/AKMaskField"` to your Cartfile.
+2. Add `github "qasimsina/AKMaskField"` to your Cartfile.
 
 3. Run `carthage update`.
 
