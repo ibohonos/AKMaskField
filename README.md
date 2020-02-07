@@ -83,6 +83,13 @@ To install **AKMaskField** with Carthage:
 [Carthage]: https://github.com/Carthage/Carthage
 [Homebrew]: http://brew.sh
 
+### Swift Package Manager
+```swift
+dependencies: [
+    .Package(url: "https://github.com/ibohonos/AKMaskField", majorVersion: 2)
+]
+```
+
 ### Manual
 
 If you prefer not to use either of the aforementioned dependency managers, you can integrate **AKMaskField** into your project manually.
@@ -134,6 +141,8 @@ The string value that has blocks with pattern symbols that determine the certain
 | **D** | Any symbol, except decimal number |
 | **W** | Not an alphabetic symbol |
 | **a** | Alphabetic symbol, a-Z | 
+| **n** | Number and Alphabetic symbol, 0-9 a-Z |
+| **m** | for MAC symbol, 0-9 a-f A-F |
 | **.** | Corresponds to any symbol (default) |
 
 Default value of this property is `nil`.
@@ -433,6 +442,8 @@ enum AKMaskFieldPatternCharacter: String {
   case NonDecimal = "D"
   case NonWord = "W"
   case Alphabet = "a"
+  case NumberAndWord = "n"
+  case MAC = "m"
   case Any = "."
 }
 ```
@@ -445,6 +456,8 @@ Single block character pattern constant.
 - `NonDecimal`	: Any symbol, except decimal number
 - `NonWord`	: Not an alphabetic symbol
 - `Alphabet`	: Alphabetic symbol, a-Z
+- `NumberAndWord`    : Number and Alphabetic symbol, 0-9 a-Z
+- `MAC`    : for MAC symbol, 0-9 a-f A-F
 - `Any`	: Corresponds to any symbol (default)
 
 ```swift

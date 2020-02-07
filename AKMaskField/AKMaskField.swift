@@ -59,6 +59,8 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
      - D : Any symbol, except decimal number
      - W : Not an alphabetic symbol
      - a : Alphabetic symbol, a-Z
+     - n : Number and Alphabetic symbol, 0-9 a-Z
+     - m : for MAC symbol, 0-9 a-f A-F
      - . : Corresponds to any symbol (default)
 
      Default value of this property is `nil`.
