@@ -683,6 +683,10 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
         return maskDelegate?.maskFieldShouldReturn(self) ?? true
     }
     
+    open func textFieldDidChangeSelection(_ textField: UITextField) {
+        maskDelegate?.maskFieldDidChangeSelection(self)
+    }
+    
     fileprivate func debugmaskBlocks() {
         for block in maskBlocks {
             print("BLOCK :")
@@ -784,6 +788,15 @@ public protocol AKMaskFieldDelegate: class {
     */
     
     func maskFieldShouldReturn(_ maskField: AKMaskField) -> Bool
+    
+    /**
+     
+     Asks the delegate if the mask field should process writing.
+    
+     - parameter maskField : The mask field whose return button was pressed.
+    
+    */
+    func maskFieldDidChangeSelection(_ maskField: AKMaskField)
 }
 
 public extension AKMaskFieldDelegate {
@@ -809,4 +822,6 @@ public extension AKMaskFieldDelegate {
     func maskFieldShouldReturn(_ maskField: AKMaskField) -> Bool {
         return true
     }
+    
+    func maskFieldDidChangeSelection(_ maskField: AKMaskField) {}
 }
