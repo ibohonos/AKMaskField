@@ -668,8 +668,6 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
             maskDelegate?.maskField(self, didChangedWithEvent: event)
         }
         
-        maskDelegate?.maskFieldDidEndEditing(self)
-        
         return false
     }
     
