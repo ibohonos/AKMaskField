@@ -826,7 +826,3 @@ public extension AKMaskFieldDelegate {
     
     func maskFieldDidChangeSelection(_ maskField: AKMaskField) {}
 }
-
-extension AKMaskField {
-    public class let maskNotification: NSNotification.Name
-}
