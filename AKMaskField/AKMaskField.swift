@@ -799,10 +799,7 @@ public protocol AKMaskFieldDelegate: class {
     func maskFieldDidChangeSelection(_ maskField: AKMaskField)
 }
 
-public extension AKMaskFieldDelegate {
-    
-    public static var maskNotification: NSNotification.Name
-    
+public extension AKMaskFieldDelegate {    
     func maskFieldShouldBeginEditing(_ maskField: AKMaskField) -> Bool {
         return true
     }
@@ -826,4 +823,8 @@ public extension AKMaskFieldDelegate {
     }
     
     func maskFieldDidChangeSelection(_ maskField: AKMaskField) {}
+}
+
+extension AKMaskField {
+    public class let maskNotification: NSNotification.Name
 }
