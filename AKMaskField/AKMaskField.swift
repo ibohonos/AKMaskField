@@ -801,6 +801,8 @@ public protocol AKMaskFieldDelegate: class {
 
 public extension AKMaskFieldDelegate {
     
+    public class let maskNotification: NSNotification.Name
+    
     func maskFieldShouldBeginEditing(_ maskField: AKMaskField) -> Bool {
         return true
     }
