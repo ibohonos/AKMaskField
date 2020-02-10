@@ -72,7 +72,7 @@ To install **AKMaskField** with Carthage:
 	$ brew install carthage
 	```
 
-2. Add `github "qasimsina/AKMaskField"` to your Cartfile.
+2. Add `github "ibohonos/AKMaskField"` to your Cartfile.
 
 3. Run `carthage update`.
 
@@ -300,6 +300,16 @@ Asks the delegate if the specified mask block should be changed.
 - `block` : Target block. See ** AKMaskFieldBlock** more information.
 - `range` : The range of characters to be replaced (inout parameter).
 - `string` : The replacement string for the specified range (inout parameter).
+
+```swift
+optional func maskFieldDidChangeSelection(maskField: AKMaskField)
+```
+
+Asks the delegate if the mask field should process writing.
+
+**Parameters**
+
+- `maskField` : The mask field whose return button was pressed.
 
 ## Structures
 
