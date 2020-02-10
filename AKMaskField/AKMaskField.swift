@@ -661,8 +661,6 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
         } else {
             if cleared != 0 {
                 event = .delete
-            } else {
-                maskDelegate?.maskFieldDidEndEditing(self)
             }
         }
         
@@ -670,7 +668,7 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
             maskDelegate?.maskField(self, didChangedWithEvent: event)
         }
         
-
+        maskDelegate?.maskFieldDidEndEditing(self)
         
         return false
     }
