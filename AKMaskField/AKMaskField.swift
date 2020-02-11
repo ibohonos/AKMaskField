@@ -413,13 +413,6 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
     }
     
     open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if string != "" {
-            clearText.append(string)
-        } else {
-            clearText = String(clearText.dropLast())
-        }
-        
         // CHECKS
         
         if guardMask { return false }
@@ -574,6 +567,11 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
                     // UPDATE MASK TEXT
                     
                     // Replacement string
+                    if string != "" {
+                        clearText.append(string)
+                    } else {
+                        clearText = String(clearText.dropLast())
+                    }
 
                     if !_string.isEmpty {
                         
