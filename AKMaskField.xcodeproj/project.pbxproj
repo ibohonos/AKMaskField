@@ -217,7 +217,7 @@
 					};
 					01959A151DF1BA7700C9E359 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ZWXGPDM42S;
+						DevelopmentTeam = TPG5USZTMS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -395,7 +395,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = ZWXGPDM42S;
+				DEVELOPMENT_TEAM = TPG5USZTMS;
 				INFOPLIST_FILE = AKMaskFieldExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

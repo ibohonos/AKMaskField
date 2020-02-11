@@ -223,6 +223,9 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
         }
     }
     
+    /// Set clear text without mask
+    open var clearText: String = ""
+    
     /// Manually refresh the mask field
     
     open func refreshMask() {
@@ -410,6 +413,7 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
     }
     
     open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        clearText.append(string)
         
         // CHECKS
         
