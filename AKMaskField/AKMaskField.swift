@@ -223,7 +223,7 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
         }
     }
     
-    /// Set clear text without mask
+    /// Get clear text without mask
     open var clearText: String = ""
     
     /// Manually refresh the mask field

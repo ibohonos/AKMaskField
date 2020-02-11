@@ -198,6 +198,14 @@ var text: String? { get set }
 
 The text displayed by the mask field. 
 
+## Accessing the ClearText Attributes
+
+```swift
+var clearText: String { get }
+```
+
+The clearText displayed without the mask. 
+
 ## Mask Field actions
 
 ```swift
