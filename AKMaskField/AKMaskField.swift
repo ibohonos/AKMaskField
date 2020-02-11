@@ -413,7 +413,12 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
     }
     
     open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        clearText.append(string)
+        
+        if string != "" {
+            clearText.append(string)
+        } else {
+            clearText = String(clearText.dropLast())
+        }
         
         // CHECKS
         
