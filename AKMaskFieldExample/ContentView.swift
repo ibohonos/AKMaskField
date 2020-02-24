@@ -11,7 +11,7 @@ import AKMaskField
 
 @available(iOS 13.0, *)
 struct ContentView: View {
-    @State private var text: String
+    @State private var text = ""
 
     var body: some View {
         VStack {
@@ -23,6 +23,6 @@ struct ContentView: View {
 @available(iOS 13.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(text: "")
+        ContentView()
     }
 }
