@@ -348,6 +348,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 2.0.5;
+				"OTHER_LDFLAGS[sdk=*]" = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemkrachulov.AKMaskField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -382,6 +386,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MARKETING_VERSION = 2.0.5;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemkrachulov.AKMaskField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

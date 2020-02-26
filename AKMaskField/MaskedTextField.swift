@@ -7,10 +7,11 @@
 //
 
 import Foundation
+#if canImport(SwiftUI)
 import SwiftUI
+#endif
 
 @available(iOS 13.0, *)
-@available(iOSApplicationExtension 13.0, *)
 public struct MaskedTextField: UIViewRepresentable {
     @Binding var text: String
         
