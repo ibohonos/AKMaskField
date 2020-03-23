@@ -1,8 +1,8 @@
 //
-//  MaskedTextField.swift
+//  SwiftUIMasketTextField.swift
 //  AKMaskField
 //
-//  Created by Іван Богоносюк on 24.02.2020.
+//  Created by Іван Богоносюк on 23.03.2020.
 //  Copyright © 2020 Artem Krachulov. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import SwiftUI
 #endif
 
 @available(iOS 13.0, *)
-public struct MaskedTextField: UIViewRepresentable {
+public struct SwiftUIMaskedTextField: UIViewRepresentable {
     @Binding var text: String
         
     let placeholder: String
@@ -20,6 +20,8 @@ public struct MaskedTextField: UIViewRepresentable {
     var maskType: String = "_"
     var keyboardType: UIKeyboardType = .default
     var isClear: Bool = false
+
+    @State var firstUpdate = true
     
     public init(_ placeholder: String, text: Binding<String>) {
         self.placeholder = placeholder
@@ -126,14 +128,20 @@ public struct MaskedTextField: UIViewRepresentable {
         return field
     }
 
-    public func updateUIView(_ uiView: AKMaskField, context: Context) {
-//        uiView.text = text
+    public func updateUIView(_ maskField: AKMaskField, context: Context) {
+        if firstUpdate {
+            DispatchQueue.main.async {
+                self.firstUpdate = false
+            }
+
+            maskField.text = text
+        }
     }
     
     public class Coordinator : NSObject, AKMaskFieldDelegate {
-        var parent: MaskedTextField
+        var parent: SwiftUIMaskedTextField
 
-        init(_ uiTextView: MaskedTextField) {
+        init(_ uiTextView: SwiftUIMaskedTextField) {
             self.parent = uiTextView
         }
 
@@ -143,10 +151,12 @@ public struct MaskedTextField: UIViewRepresentable {
         }
         
         public func maskFieldDidChangeSelection(_ maskField: AKMaskField) {
-            if parent.isClear {
-                parent.text = maskField.clearText
-            } else {
-                parent.text = maskField.text ?? ""
+            DispatchQueue.main.async {
+                if self.parent.isClear {
+                    self.parent.text = maskField.clearText
+                } else {
+                    self.parent.text = maskField.text ?? ""
+                }
             }
         }
     }

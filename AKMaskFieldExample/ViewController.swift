@@ -23,13 +23,13 @@ final class ViewController: UIViewController {
         return cardProgrammatically ?? cardStoryboard
     }
     private var phone: AKMaskField {
-        return cardProgrammatically ?? cardStoryboard
+        return cardProgrammatically ?? phoneStoryboard
     }
     private var key: AKMaskField {
-        return cardProgrammatically ?? cardStoryboard
+        return cardProgrammatically ?? keyStoryboard
     }
     private var license: AKMaskField {
-        return cardProgrammatically ?? cardStoryboard
+        return cardProgrammatically ?? licenseStoryboard
     }
     
     //  MARK: - Connections:
@@ -92,7 +92,7 @@ final class ViewController: UIViewController {
         cardProgrammatically?.tag = 0
         cardProgrammatically?.setMask("{dddd}-{dddd}-{dddd}-{dddd}", withMaskTemplate: "ABCD-EFGH-IJKL-MNOP")
         cardProgrammatically!.borderStyle = .roundedRect
-        view.addSubview(cardProgrammatically!)        
+        view.addSubview(cardProgrammatically!)
          
         phoneProgrammatically = AKMaskField(frame: CGRect(x: 16, y: 207.5, width: 315, height: 30))
         phoneProgrammatically?.tag = 1

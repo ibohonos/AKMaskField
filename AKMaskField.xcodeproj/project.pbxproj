@@ -24,8 +24,9 @@
 		01959A231DF1BA7700C9E359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01959A211DF1BA7700C9E359 /* LaunchScreen.storyboard */; };
 		01959A2E1DF1BCC700C9E359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01959A2D1DF1BCC700C9E359 /* ViewController.swift */; };
 		01959A411DF1C0F700C9E359 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01959A401DF1C0F700C9E359 /* fontawesome-webfont.ttf */; };
-		7A5A0300240417740096F920 /* MaskedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5A02FF240417740096F920 /* MaskedTextField.swift */; };
-		7A5A03022404190D0096F920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5A03012404190D0096F920 /* ContentView.swift */; };
+		7A2CA11C2428E1B10037AD20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CA11B2428E1B10037AD20 /* ContentView.swift */; };
+		7A2CA1242428F3020037AD20 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CA1232428F3020037AD20 /* SwiftUIViewController.swift */; };
+		7A2CA1262428F57F0037AD20 /* SwiftUIMasketTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2CA1252428F57F0037AD20 /* SwiftUIMasketTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +73,9 @@
 		01959A241DF1BA7700C9E359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01959A2D1DF1BCC700C9E359 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01959A401DF1C0F700C9E359 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		7A5A02FF240417740096F920 /* MaskedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedTextField.swift; sourceTree = "<group>"; };
-		7A5A03012404190D0096F920 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A2CA11B2428E1B10037AD20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A2CA1232428F3020037AD20 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		7A2CA1252428F57F0037AD20 /* SwiftUIMasketTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMasketTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,7 @@
 				010F961B1DF2C04B00321C94 /* AKMaskFieldPatternCharacter.swift */,
 				010F961C1DF2C04B00321C94 /* AKMaskFieldStatus.swift */,
 				010F961D1DF2C04B00321C94 /* AKMaskFieldUtility.swift */,
-				7A5A02FF240417740096F920 /* MaskedTextField.swift */,
+				7A2CA1252428F57F0037AD20 /* SwiftUIMasketTextField.swift */,
 				010F96161DF2C03C00321C94 /* Supporting Files */,
 			);
 			path = AKMaskField;
@@ -131,7 +133,8 @@
 				01959A1F1DF1BA7700C9E359 /* Assets.xcassets */,
 				01959A211DF1BA7700C9E359 /* LaunchScreen.storyboard */,
 				01959A241DF1BA7700C9E359 /* Info.plist */,
-				7A5A03012404190D0096F920 /* ContentView.swift */,
+				7A2CA11B2428E1B10037AD20 /* ContentView.swift */,
+				7A2CA1232428F3020037AD20 /* SwiftUIViewController.swift */,
 			);
 			path = AKMaskFieldExample;
 			sourceTree = "<group>";
@@ -275,9 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				010F961F1DF2C04B00321C94 /* AKMaskFieldBlock.swift in Sources */,
-				7A5A0300240417740096F920 /* MaskedTextField.swift in Sources */,
 				010F961E1DF2C04B00321C94 /* AKMaskField.swift in Sources */,
 				010F96201DF2C04B00321C94 /* AKMaskFieldBlockCharacter.swift in Sources */,
+				7A2CA1262428F57F0037AD20 /* SwiftUIMasketTextField.swift in Sources */,
 				010F96241DF2C04B00321C94 /* AKMaskFieldUtility.swift in Sources */,
 				010F96221DF2C04B00321C94 /* AKMaskFieldPatternCharacter.swift in Sources */,
 				010F96231DF2C04B00321C94 /* AKMaskFieldStatus.swift in Sources */,
@@ -290,9 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2CA1242428F3020037AD20 /* SwiftUIViewController.swift in Sources */,
 				01959A2E1DF1BCC700C9E359 /* ViewController.swift in Sources */,
 				01959A191DF1BA7700C9E359 /* AppDelegate.swift in Sources */,
-				7A5A03022404190D0096F920 /* ContentView.swift in Sources */,
+				7A2CA11C2428E1B10037AD20 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -567,13 +567,13 @@ open class AKMaskField: UITextField, UITextFieldDelegate  {
                     // UPDATE MASK TEXT
                     
                     // Replacement string
-                    if string != "" {
-                        clearText.append(string)
-                    } else {
+                    if string == "" {
                         clearText = String(clearText.dropLast())
                     }
 
                     if !_string.isEmpty {
+
+                        clearText.append(_string)
                         
                         var maskTextRange = NSMakeRange(_range.location, _string.count)
                         
