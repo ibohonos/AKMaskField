@@ -11,11 +11,18 @@ import AKMaskField
 
 @available(iOS 13.0, *)
 struct ContentView: View {
-    @State var phone = ""
+    @State var phone = "" {
+        didSet {
+            print("phone 2 \(phone)")
+            if phone != oldValue {
+                print("phone set \(phone)")
+            }
+        }
+    }
 
     var body: some View {
         ScrollView {
-            SwiftUIMaskedTextField("", text: $phone, mask: "+38 ({ddd}) {ddd}-{dd}-{dd}", keyboardType: .phonePad)
+            SwiftUIMaskedTextField("", text: $phone, isClear: true, mask: "+38 ({ddd}) {ddd}-{dd}-{dd}", keyboardType: .phonePad)
                 .padding(.vertical, 10.0)
                 .padding(.horizontal, 25.0)
                 .background(Color(red: 248 / 255, green: 248 / 255, blue: 248 / 255))
@@ -23,7 +30,6 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .fixedSize(horizontal: false, vertical: true)
         }
-//        .background(Color.red)
         .padding()
         .navigationBarTitle(Text("Display"), displayMode: .inline)
         .onAppear {

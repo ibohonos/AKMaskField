@@ -11,6 +11,7 @@ import Foundation
 import SwiftUI
 #endif
 
+#if AKMaskFieldDEBUG
 @available(iOS 13.0, *)
 public struct SwiftUIMaskedTextField: UIViewRepresentable {
     @Binding var text: String
@@ -23,82 +24,13 @@ public struct SwiftUIMaskedTextField: UIViewRepresentable {
 
     @State var firstUpdate = true
     
-    public init(_ placeholder: String, text: Binding<String>) {
-        self.placeholder = placeholder
-        self._text = text
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool) {
-        self.placeholder = placeholder
-        self._text = text
-        self.isClear = isClear
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, keyboardType: UIKeyboardType) {
-        self.placeholder = placeholder
-        self._text = text
-        self.keyboardType = keyboardType
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool, keyboardType: UIKeyboardType) {
-        self.placeholder = placeholder
-        self._text = text
-        self.keyboardType = keyboardType
-        self.isClear = isClear
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, mask: String) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool, mask: String) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.isClear = isClear
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, mask: String, keyboardType: UIKeyboardType) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.keyboardType = keyboardType
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool, mask: String, keyboardType: UIKeyboardType) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.keyboardType = keyboardType
-        self.isClear = isClear
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, mask: String, maskType: String) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.maskType = maskType
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool, mask: String, maskType: String) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.maskType = maskType
-        self.isClear = isClear
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, mask: String, maskType: String, keyboardType: UIKeyboardType) {
-        self.placeholder = placeholder
-        self._text = text
-        self.mask = mask
-        self.maskType = maskType
-        self.keyboardType = keyboardType
-    }
-    
-    public init(_ placeholder: String, text: Binding<String>, isClear: Bool, mask: String, maskType: String, keyboardType: UIKeyboardType) {
+    public init(_ placeholder: String,
+         text: Binding<String>,
+         isClear: Bool = false,
+         mask: String? = nil,
+         maskType: String = "_",
+         keyboardType: UIKeyboardType = .default
+    ) {
         self.placeholder = placeholder
         self._text = text
         self.mask = mask
@@ -161,3 +93,4 @@ public struct SwiftUIMaskedTextField: UIViewRepresentable {
         }
     }
 }
+#endif

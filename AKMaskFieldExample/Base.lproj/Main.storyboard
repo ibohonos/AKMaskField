@@ -607,8 +607,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cn-YL-b3W">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="20" y="20" width="335" height="647"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="T1O-5s-jBA" kind="embed" destinationCreationSelector="showSwiftUI:" id="zoC-No-zdf"/>
                                 </connections>
